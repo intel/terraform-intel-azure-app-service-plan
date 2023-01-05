@@ -37,7 +37,7 @@ variable "os_type" {
 }
 
 variable "tags" {
-  description = "Map of tags to apply."
+  description = "Map of tags to apply"
   type        = map(string)
   default     = null
 }
