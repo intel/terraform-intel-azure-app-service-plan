@@ -1,42 +1,48 @@
 
-
 <p align="center">
-  <img src="./images/logo-classicblue-800px.png" alt="Intel Logo" width="250"/>
+  <img src="https://github.com/intel/terraform-intel-azure-app-service-plan/blob/main/images/logo-classicblue-800px.png?raw=true" alt="Intel Logo" width="250"/>
 </p>
 
 # Intel® Cloud Optimization Modules for Terraform
 
 © Copyright 2022, Intel Corporation
 
-## Module name
+## Azure App Service Plan Module
+
+This module can be used to deploy an Intel optimized Azure Service Plan.
+
+The module favors V3 Premium instances wich run on faster processors.
 
 ## Usage
 
-See examples folder for code ./examples/intel-optimized-postgresql-server/main.tf
+**See examples folder for complete examples.**
 
-Example of main.tf
+By default, you only have to pass two variables
 
 ```hcl
-# Example of how to pass variable for database password:
-# terraform apply -var="db_password=..."
-# Environment variables can also be used https://www.terraform.io/language/values/variables#environment-variables
+service_plan_name
+resource_group_name      
+```
 
-# Provision Intel Cloud Optimization Module
-module "module-example" {
-  source = "github.com/intel/module-name"
+main.tf
+
+```hcl
+module "linux-service-plan" {
+  source              = "intel/azure-app-service-plan/intel"
+  service_plan_name   = "intel-linux-service-plan-01"
+  resource_group_name = "my-app-rg"
 }
-
 ```
 
 Run Terraform
 
 ```hcl
+
 terraform init  
 terraform plan
-terraform apply
-
+terraform apply 
 ```
 
-Note that this example may create resources. Run `terraform destroy` when you don't need these resources anymore.
+## Considerations
 
-## Considerations  
+This module does not deploy the App Service Web App, for that look at the Intel Windows/Linux App Service Web App modules.

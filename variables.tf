@@ -2,6 +2,7 @@
 ####     Intel      ####
 ########################
 
+# See policies.md, we recommend  Premium v3 Service plans
 # Premium v3 Service Plans features faster processors, Hyper-V virtualization and support for VNet connectivity
 # Recommendations for App Services: P1v3, P2v3 or P3v3, 
 # Recommendations Functions Elastic plans: EP1, EP2, or EP3
@@ -14,7 +15,6 @@ variable "sku_name" {
 ####    Required    ####
 ########################
 
-
 variable "service_plan_name" {
   description = "The name of the App Service Plan"
   type        = string
@@ -24,7 +24,6 @@ variable "resource_group_name" {
   description = "The name of the Resource Group"
   type        = string
 }
-
 
 ########################
 ####     Other      ####
