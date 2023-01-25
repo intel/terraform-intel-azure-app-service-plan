@@ -1,8 +1,9 @@
-
+# Aquire the resource group information
 data "azurerm_resource_group" "rg" {
   name = var.resource_group_name
 }
 
+# Create the App Service Plan
 resource "azurerm_service_plan" "service_plan" {
   sku_name                     = var.sku_name
   name                         = var.service_plan_name
