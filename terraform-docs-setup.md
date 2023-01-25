@@ -1,7 +1,11 @@
-# Overview
+# For documentation purposes only, no additional steps are needed 
+
+This workflow was already created as part of the repository initialization   
+
+## Overview
 Terraform-Docs is a utility to generate documentation from Terraform modules in various output formats. Use the following code to use GitHub actions to automate Terraform module documentation from pull requests. 
 
-# Steps
+## Steps (already done in this repo)
 To use terraform-docs github action, create a YAML workflow file .github/workflows/documentation.yml in your main repo, with the following code:
 
 ```

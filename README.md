@@ -11,7 +11,7 @@
 
 This module can be used to deploy an Intel optimized Azure Service Plan.
 
-The module favors V3 Premium instances wich run on faster processors.
+The module favors V3 Premium instances which run on faster processors.
 
 ## Usage
 
